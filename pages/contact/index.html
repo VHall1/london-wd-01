@@ -78,7 +78,13 @@
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input class="input" type="text" placeholder="Name" />
+                  <input
+                    class="input"
+                    name="name"
+                    type="text"
+                    placeholder="Name"
+                    required
+                  />
                   <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                   </span>
@@ -114,18 +120,19 @@
               <div class="field is-expanded">
                 <div class="field has-addons">
                   <p class="control">
-                    <a class="button is-static"> +44 </a>
+                    <a class="button is-static">+44</a>
                   </p>
                   <p class="control is-expanded">
                     <input
                       class="input"
+                      name="phone"
                       type="tel"
                       placeholder="Your phone number"
                       maxlength="11"
                     />
                   </p>
                 </div>
-                <p class="help">Do not enter the first zero</p>
+                <p class="help">* This field is optional</p>
               </div>
             </div>
           </div>
@@ -139,14 +146,12 @@
                 <div class="control">
                   <input
                     class="input"
+                    name="subject"
                     type="text"
                     placeholder="e.g. Partnership opportunity"
                     required
                   />
                 </div>
-                <!-- <p class="help is-danger">
-                  This field is required
-                </p> -->
               </div>
             </div>
           </div>
@@ -160,7 +165,9 @@
                 <div class="control">
                   <textarea
                     class="textarea"
+                    name="message"
                     placeholder="Explain how we can help you"
+                    required
                   ></textarea>
                 </div>
               </div>
@@ -173,8 +180,8 @@
             </div>
             <div class="field-body">
               <div class="field">
-                <div class="control">
-                  <button class="button is-primary">Send message</button>
+                <div class="control is-flex">
+                  <button class="button is-primary ml-auto">Submit</button>
                 </div>
               </div>
             </div>

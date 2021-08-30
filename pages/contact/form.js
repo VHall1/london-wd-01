@@ -1,6 +1,5 @@
-let message = null;
-
-const form = document.getElementById("contact-form")
+const formElement = document.getElementById("contact-form");
+const mainElement = document.querySelectorAll("main")[0];
 
 // Fields
 const emailElement = document.getElementsByName("email");
@@ -31,5 +30,21 @@ emailElement[0].addEventListener("input", (evt) => {
 });
 
 // Form OnSubmit
-form.addEventListener("submit", (evt) => {
-})
+formElement.addEventListener("submit", (evt) => {
+  // Prevent page from reloading
+  evt.preventDefault();
+
+  const message = document.createElement("div");
+  message.classList.add("notification", "is-success", "is-light");
+  message.innerHTML = `
+    <button class="delete" onclick="dismissNotification()"></button>
+    Message sent successfully!
+  `;
+
+  mainElement.prepend(message);
+});
+
+const dismissNotification = () => {
+  const notificationElement = document.querySelectorAll(".notification")
+  notificationElement[0]?.parentNode.removeChild(notificationElement[0]);
+};

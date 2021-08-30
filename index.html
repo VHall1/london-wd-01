@@ -3,20 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/images/BBC-logo.png" />
+    <link rel="icon" href="./assets/images/BBC-logo.png" />
     <title>Home - BBC Newsletter</title>
 
-    <link rel="stylesheet" href="assets/styles/navbar.css" />
-    <link rel="stylesheet" href="assets/styles/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/styles/navbar.css" />
+    <link rel="stylesheet" href="./assets/styles/global.css" />
+    <link rel="stylesheet" href="./assets/styles/bulma.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   </head>
   <body>
     <nav>
       <div class="navbar-inner">
-        <a class="mr-5" href="index.html" style="line-height: 1">
+        <a class="mr-5" href="./index.html" style="line-height: 1">
           <img class="navbar-brand" src="assets/images/BBC-logo.png" />
         </a>
         <a
-          href="index.html"
+          href="./index.html"
           class="
             is-link is-hidden-touch
             has-text-white has-text-weight-semibold
@@ -25,8 +27,14 @@
         >
           Home
         </a>
-        <a class="is-hidden-touch has-text-white has-text-weight-semibold">
+        <a class="is-hidden-touch has-text-white has-text-weight-semibold mr-5">
           News
+        </a>
+        <a
+          href="./pages/contact/index.html"
+          class="is-hidden-touch has-text-white has-text-weight-semibold"
+        >
+          Contact Us
         </a>
 
         <div class="ml-auto">
@@ -51,6 +59,7 @@
         </div>
       </div>
     </nav>
+    
     <!-- Adds spacing between navbar and body -->
     <section class="section">
       <main class="container is-max-desktop">
@@ -108,6 +117,7 @@
         <p class="subtitle">My first website with <strong>Bulma</strong>!</p>
       </main>
     </section>
+
     <footer class="footer">
       <div class="content has-text-centered">
         <p>

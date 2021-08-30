@@ -1,0 +1,8 @@
+main {
+  min-height: 100%;
+}
+
+footer {
+  /* Override bulma weird padding */
+  padding: 3rem 1.5rem 3rem !important;
+}

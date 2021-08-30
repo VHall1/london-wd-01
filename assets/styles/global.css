@@ -1,8 +1,12 @@
-main {
-  min-height: 100%;
+body {
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
   /* Override bulma weird padding */
+  margin-top: auto;
   padding: 3rem 1.5rem 3rem !important;
 }

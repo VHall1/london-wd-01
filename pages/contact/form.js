@@ -2,8 +2,12 @@ const formElement = document.getElementById("contact-form");
 const mainElement = document.querySelectorAll("main")[0];
 
 // Fields
-const emailElement = document.getElementsByName("email");
+const emailElement = document.getElementsByName("email")[0];
 const emailValidCheckmark = document.getElementById("id-valid-checkmark");
+const nameElement = document.getElementsByName("name")[0];
+const phoneElement = document.getElementsByName("phone")[0];
+const subjectElement = document.getElementsByName("subject")[0];
+const messageElement = document.getElementsByName("message")[0];
 
 const validateEmail = (email) => {
   // https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
@@ -14,17 +18,17 @@ const validateEmail = (email) => {
 
 // Show a small checkmark and make the field green
 // if email is valid
-emailElement[0].addEventListener("input", (evt) => {
+emailElement.addEventListener("input", (evt) => {
   // Get field value
   const email = evt.target.value;
   const isEmailValid = validateEmail(email);
   console.log(email);
 
   if (isEmailValid) {
-    emailElement[0].classList.add("is-success");
+    emailElement.classList.add("is-success");
     emailValidCheckmark.style.display = "flex";
   } else {
-    emailElement[0].classList.remove("is-success");
+    emailElement.classList.remove("is-success");
     emailValidCheckmark.style.display = "none";
   }
 });
@@ -33,18 +37,60 @@ emailElement[0].addEventListener("input", (evt) => {
 formElement.addEventListener("submit", (evt) => {
   // Prevent page from reloading
   evt.preventDefault();
+  const [name, email, phone, subject, message] = [
+    nameElement.value,
+    emailElement.value,
+    phoneElement.value,
+    subjectElement.value,
+    messageElement.value,
+  ];
 
-  const message = document.createElement("div");
-  message.classList.add("notification", "is-success", "is-light");
-  message.innerHTML = `
+  const createElement = () => {
+    const el = document.createElement("p");
+    el.id = "required-error";
+    el.classList.add("help", "is-danger");
+    el.innerText = "This field is required!";
+    return el;
+  };
+
+  const errorElement = document.getElementById("required-error");
+  errorElement?.remove();
+
+  if (!name) {
+    const el = createElement();
+    nameElement.parentNode.parentNode.appendChild(el);
+    return;
+  }
+
+  if (!email) {
+    const el = createElement();
+    emailValidCheckmark.parentNode.parentNode.appendChild(el);
+    return;
+  }
+
+  if (!subject) {
+    const el = createElement();
+    subjectElement.parentNode.parentNode.appendChild(el);
+    return;
+  }
+
+  if (!message) {
+    const el = createElement();
+    messageElement.parentNode.parentNode.appendChild(el);
+    return;
+  }
+
+  const notification = document.createElement("div");
+  notification.classList.add("notification", "is-success", "is-light");
+  notification.innerHTML = `
     <button class="delete" onclick="dismissNotification()"></button>
     Message sent successfully!
   `;
 
-  mainElement.prepend(message);
+  mainElement.prepend(notification);
 });
 
 const dismissNotification = () => {
-  const notificationElement = document.querySelectorAll(".notification")
+  const notificationElement = document.querySelectorAll(".notification");
   notificationElement[0]?.parentNode.removeChild(notificationElement[0]);
 };

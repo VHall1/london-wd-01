@@ -22,7 +22,6 @@ emailElement.addEventListener("input", (evt) => {
   // Get field value
   const email = evt.target.value;
   const isEmailValid = validateEmail(email);
-  console.log(email);
 
   if (isEmailValid) {
     emailElement.classList.add("is-success");
@@ -34,13 +33,13 @@ emailElement.addEventListener("input", (evt) => {
 });
 
 // Form OnSubmit
+
 formElement.addEventListener("submit", (evt) => {
   // Prevent page from reloading
   evt.preventDefault();
-  const [name, email, phone, subject, message] = [
+  const [name, email, subject, message] = [
     nameElement.value,
     emailElement.value,
-    phoneElement.value,
     subjectElement.value,
     messageElement.value,
   ];
@@ -79,6 +78,12 @@ formElement.addEventListener("submit", (evt) => {
     messageElement.parentNode.parentNode.appendChild(el);
     return;
   }
+
+  nameElement.value = "";
+  emailElement.value = "";
+  phoneElement.value = "";
+  subjectElement.value = "";
+  messageElement.value = "";
 
   const notification = document.createElement("div");
   notification.classList.add("notification", "is-success", "is-light");

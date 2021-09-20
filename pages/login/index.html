@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../../assets/images/BBC-logo.png" />
+    <title>Home - BBC Newsletter</title>
+
+    <link rel="stylesheet" href="../../assets/styles/navbar.css" />
+    <link rel="stylesheet" href="../../assets/styles/global.css" />
+    <link rel="stylesheet" href="../../assets/styles/bulma.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar-inner">
+        <a class="mr-5" href="../../index.html" style="line-height: 1">
+          <img class="navbar-brand" src="../../assets/images/BBC-logo.png" />
+        </a>
+        <a
+          href="../../index.html"
+          class="is-hidden-touch has-text-white has-text-weight-semibold mr-5"
+        >
+          News
+        </a>
+        <a
+          href="../about/index.html"
+          class="is-hidden-touch has-text-white has-text-weight-semibold mr-5"
+        >
+          About Us
+        </a>
+        <a
+          href="../contact/index.html"
+          class="is-hidden-touch has-text-white has-text-weight-semibold"
+        >
+          Contact
+        </a>
+
+        <div class="ml-auto">
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+
+          <!-- Hide buttons in tablets/mobiles -->
+          <div class="buttons is-hidden-touch">
+            <a href="./index.html" class="button is-light is-outlined">
+              Sign in
+            </a>
+            <a href="../register/index.html" class="button is-light">
+              <strong>Sign up</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Adds spacing between navbar and body -->
+    <section class="section">
+      <main class="container is-max-desktop">
+        <div class="card">
+          <div class="card-content">
+            <div class="content if-flex h-100">
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" id="username" placeholder="Username" />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" type="password" placeholder="Password" />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-flex">
+                  <a href="../../index.html" class="button is-success w-100"
+                    >Login</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Built by <strong>Victor Hall</strong>, for educational purposes only
+        </p>
+        <p>
+          All articles and assets belong to
+          <strong>BBC - Copyright © 2021</strong>
+        </p>
+        <p class="has-text-grey has-text-weight-light">
+          University of London - Goldsmiths
+        </p>
+      </div>
+    </footer>
+
+    <script src="./form.js"></script>
+  </body>
+</html>

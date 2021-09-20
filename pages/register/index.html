@@ -35,7 +35,7 @@
           About Us
         </a>
         <a
-          href="./index.html"
+          href="../contact/index.html"
           class="is-hidden-touch has-text-white has-text-weight-semibold"
         >
           Contact
@@ -58,7 +58,7 @@
             <a href="../login/index.html" class="button is-light is-outlined">
               Sign in
             </a>
-            <a href="../register/index.html" class="button is-light">
+            <a href="./index.html" class="button is-light">
               <strong>Sign up</strong>
             </a>
           </div>
@@ -69,121 +69,46 @@
     <!-- Adds spacing between navbar and body -->
     <section class="section">
       <main class="container is-max-desktop">
-        <h1 class="title">Contact Us</h1>
-
-        <form id="contact-form">
-          <div class="field is-horizontal">
-            <div class="field-label is-normal">
-              <label class="label">From</label>
-            </div>
-            <div class="field-body">
+        <div class="card">
+          <div class="card-content">
+            <div class="content if-flex h-100">
               <div class="field">
-                <p class="control is-expanded has-icons-left">
-                  <input
-                    class="input"
-                    name="name"
-                    type="text"
-                    placeholder="Name"
-                  />
+                <p class="control has-icons-left">
+                  <input class="input" id="username" placeholder="Username" />
                   <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                   </span>
                 </p>
               </div>
               <div class="field">
-                <p class="control is-expanded has-icons-left has-icons-right">
-                  <input
-                    class="input"
-                    name="email"
-                    type="email"
-                    placeholder="Email"
-                  />
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input" type="email" placeholder="Email" />
                   <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
                   </span>
-                  <span
-                    id="id-valid-checkmark"
-                    class="icon is-small is-right"
-                    style="display: none"
-                  >
+                  <span class="icon is-small is-right">
                     <i class="fas fa-check"></i>
                   </span>
                 </p>
               </div>
-            </div>
-          </div>
-
-          <div class="field is-horizontal">
-            <div class="field-label"></div>
-            <div class="field-body">
-              <div class="field is-expanded">
-                <div class="field has-addons">
-                  <p class="control">
-                    <a class="button is-static">+44</a>
-                  </p>
-                  <p class="control is-expanded">
-                    <input
-                      class="input"
-                      name="phone"
-                      type="tel"
-                      placeholder="Your phone number"
-                      maxlength="11"
-                    />
-                  </p>
-                </div>
-                <p class="help">* This field is optional</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="field is-horizontal">
-            <div class="field-label is-normal">
-              <label class="label">Subject</label>
-            </div>
-            <div class="field-body">
               <div class="field">
-                <div class="control">
-                  <input
-                    class="input"
-                    name="subject"
-                    type="text"
-                    placeholder="e.g. Partnership opportunity"
-                  />
-                </div>
+                <p class="control has-icons-left">
+                  <input class="input" type="password" placeholder="Password" />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
               </div>
-            </div>
-          </div>
-
-          <div class="field is-horizontal">
-            <div class="field-label is-normal">
-              <label class="label">Message</label>
-            </div>
-            <div class="field-body">
               <div class="field">
-                <div class="control">
-                  <textarea
-                    class="textarea"
-                    name="message"
-                    placeholder="Explain how we can help you"
-                  ></textarea>
-                </div>
+                <p class="control is-flex">
+                  <a href="../../index.html" class="button is-success w-100"
+                    >Register</a
+                  >
+                </p>
               </div>
             </div>
           </div>
-
-          <div class="field is-horizontal">
-            <div class="field-label">
-              <!-- Left empty for spacing -->
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <div class="control is-flex">
-                  <button class="button is-primary ml-auto">Submit</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
+        </div>
       </main>
     </section>
 
